@@ -1,0 +1,9 @@
+#ignore .os files
+*.os
+
+#ignore output library
+*.so
+
+#ignore all in godot-cpp submodule
+godot-cpp/
+
