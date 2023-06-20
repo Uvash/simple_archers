@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="simple_archers_codeblock" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="godot-project/bin" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<MakeCommands>
+					<Build command="scons" />
+					<CompileFile command="" />
+					<Clean command="scons --clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="" />
+					<SilentBuild command="scons &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/simple_archers_codeblock" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="src/Game.cpp" />
+		<Unit filename="src/Game.hpp" />
+		<Unit filename="src/components.cpp" />
+		<Unit filename="src/components.hpp" />
+		<Unit filename="src/factories.cpp" />
+		<Unit filename="src/factories.hpp" />
+		<Unit filename="src/gdexample.cpp" />
+		<Unit filename="src/gdexample.h" />
+		<Unit filename="src/register_types.cpp" />
+		<Unit filename="src/register_types.h" />
+		<Unit filename="src/sub_systems/archer_ai.hpp" />
+		<Unit filename="src/sub_systems/death_clean.cpp" />
+		<Unit filename="src/sub_systems/death_clean.hpp" />
+		<Unit filename="src/sub_systems/move_objects.cpp" />
+		<Unit filename="src/sub_systems/move_objects.hpp" />
+		<Unit filename="src/sub_systems/spawn_archer.cpp" />
+		<Unit filename="src/sub_systems/spawn_archer.hpp" />
+		<Unit filename="src/sub_systems/update_godot_objects.cpp" />
+		<Unit filename="src/sub_systems/update_godot_objects.hpp" />
+		<Extensions>
+			<code_completion>
+				<search_path add="godot-cpp/gen/include" />
+				<search_path add="godot-cpp/include" />
+			</code_completion>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

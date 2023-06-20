@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqibwyl4xirdl"]
+
+[ext_resource type="PackedScene" uid="uid://bucle7t7wyiva" path="res://cylander.tscn" id="1_ofndk"]
+[ext_resource type="PackedScene" uid="uid://b7ueon3a2m3uw" path="res://arrow.tscn" id="2_khds8"]
+[ext_resource type="Material" uid="uid://hhc0rmwhqkx7" path="res://cylander/art/body.material" id="3_hwul4"]
+[ext_resource type="Material" path="res://cylander/art/eye.material" id="4_v3bk6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aq474"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_w183d"]
+
+[node name="Game" type="Game"]
+cylinder_scene = ExtResource("1_ofndk")
+arrow_scene = ExtResource("2_khds8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 50, -50, 50)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_aq474")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+material_override = ExtResource("3_hwul4")
+material_overlay = ExtResource("4_v3bk6")
+mesh = SubResource("BoxMesh_w183d")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, 0.00434828, 63.2002, 0.00506449)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.707107, 0.612372, -0.353553, 0, 0.5, 0.866025, 0.707107, 0.612372, -0.353553, 0, 5, 0)
